@@ -1,14 +1,14 @@
 "use client";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../firebase/config";
+import { auth } from "../../firebase/config";
 import { useRouter } from "next/navigation";
 import { signOut } from "firebase/auth";
-import AddRecepie from "../components/addRecepie";
-import ListRecepie from "../components/ListRecepie";
+import ListItems from "../../components/ListItems";
+import AddItem from "../../components/addItem";
 
 import "@/app/queries.css";
 
-const Pantry = () => {
+const Grocery = () => {
   const [user] = useAuthState(auth);
   const router = useRouter();
   const userSession = sessionStorage.getItem("user");
@@ -17,7 +17,7 @@ const Pantry = () => {
     router.push("/");
   }
   return (
-    <div className="min-h-screen flex flex-col items-center gap-6 bg-gray-900">
+    <div className="main min-h-screen flex flex-col items-center gap-6 bg-gray-900">
       <div className="bg-gray navbar -800 h-20 w-full flex items-center justify-between gap-4 p-10 rounded-lg shadow-xl w-96">
         <div className="logo">
           <a href="/homepage">
@@ -79,30 +79,29 @@ const Pantry = () => {
 
       <p className="intro justify-center text-2xl  bg-slate-900 rounded-3xl flex gap-4 shadow-xl p-20 m-20">
         <img
-          width={200}
-          height={200}
-          className="rounded-md p-4"
-          src="./recepies.webp"
+          width={250}
+          height={250}
+          className="rounded-full p-4"
+          src="./cart.webp"
         />
 
         <p className="flex flex-col justify-center gap-4 text-left">
           {" "}
-          <h1 className="text-sky-500 text-left text-3xl "> Recipes Section</h1>
-          Here's where you can come up with crazy and tasty recipes to try out!{" "}
-          <br></br> You never know when your next million taste-bud waking
-          recipe idea might hit you!
+          <h1 className="text-sky-500 text-left text-3xl"> Grocery Section</h1>
+          Here's where you can manage all the items in your Shopping list !{" "}
+          <br></br> Never forget what to buy and stock up in your inventory!
         </p>
       </p>
 
-      <section className="section w-full h-full flex items-center p-20 gap-10 bg-indigo-900  m-4 rounded-md  ">
-        <div className="flex flex-col p-4 items-center" text-center>
-          <h1 className="text-sky-500 text-2xl "> Add New Recipe:</h1>
-          <AddRecepie />
+      <section className="section w-full h-full flex items-center p-20 gap-10 bg-indigo-900  m-4 rounded-md">
+        <div className=" flex flex-col p-4 items-center" text-center>
+          <h1 className="text-sky-500 text-2xl "> Add Groceries:</h1>
+          <AddItem />
         </div>
-        <ListRecepie />
+        <ListItems />
       </section>
     </div>
   );
 };
 
-export default Pantry;
+export default Grocery;

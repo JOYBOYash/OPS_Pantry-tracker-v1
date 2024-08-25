@@ -1,10 +1,10 @@
 "use client";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../firebase/config";
+import { auth } from "../../firebase/config";
 import { useRouter } from "next/navigation";
 import { signOut } from "firebase/auth";
-import AddPantry from "../components/addPantry";
-import ListPantry from "../components/ListPantry";
+import AddRecepie from "../../components/addRecepie";
+import ListRecepie from "../../components/ListRecepie";
 
 import "@/app/queries.css";
 
@@ -17,7 +17,7 @@ const Pantry = () => {
     router.push("/");
   }
   return (
-    <div className="min-h-screen flex flex-col items-center gap-2 bg-gray-900">
+    <div className="min-h-screen flex flex-col items-center gap-6 bg-gray-900">
       <div className="bg-gray navbar -800 h-20 w-full flex items-center justify-between gap-4 p-10 rounded-lg shadow-xl w-96">
         <div className="logo">
           <a href="/homepage">
@@ -82,24 +82,24 @@ const Pantry = () => {
           width={200}
           height={200}
           className="rounded-md p-4"
-          src="./pantry.webp"
+          src="./recepies.webp"
         />
 
         <p className="flex flex-col justify-center gap-4 text-left">
           {" "}
-          <h1 className="text-sky-500 text-left text-3xl"> Pantry Section</h1>
-          Here's where you can manage all the items in your pantry ! <br></br>{" "}
-          Feel free to add expiry reminder so that you'll know when your
-          products get expired !
+          <h1 className="text-sky-500 text-left text-3xl "> Recipes Section</h1>
+          Here's where you can come up with crazy and tasty recipes to try out!{" "}
+          <br></br> You never know when your next million taste-bud waking
+          recipe idea might hit you!
         </p>
       </p>
 
-      <section className="section w-full justify-center bg-indigo-900 h-full flex items-center p-20 gap-10  m-4 rounded-md  ">
+      <section className="section w-full h-full flex items-center p-20 gap-10 bg-indigo-900  m-4 rounded-md  ">
         <div className="flex flex-col p-4 items-center" text-center>
-          <h1 className="text-sky-500 text-2xl "> Add to Pantry:</h1>
-          <AddPantry />
+          <h1 className="text-sky-500 text-2xl "> Add New Recipe:</h1>
+          <AddRecepie />
         </div>
-        <ListPantry />
+        <ListRecepie />
       </section>
     </div>
   );
