@@ -137,7 +137,7 @@ const AddItem = (props) => {
         className="bg-indigo-900 flex gap-2 items-center justify-center text-xl p-2 hover:shadow-xl rounded-full hover:text-black hover:bg-indigo-600"
         type="submit"
       >
-        Add Item <img src="/add.svg" className="w-6 "></img>
+        Add Item <img src="./add.svg" className="w-6 "></img>
       </button>
     </form>
   );

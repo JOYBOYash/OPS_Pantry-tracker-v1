@@ -31,7 +31,7 @@ const SignUp = () => {
         <h1 className="text-black flex items-center gap-2 text-2xl mb-5">
           {" "}
           <img
-            src="/new.svg"
+            src="./new.svg"
             alt="Shopping_Cart"
             className="rounded-md w-6"
           ></img>{" "}

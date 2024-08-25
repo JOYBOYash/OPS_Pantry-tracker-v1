@@ -29,7 +29,7 @@ const SignIn = () => {
         <h1 className="text-black flex items-center gap-2 text-2xl mb-5">
           {" "}
           <img
-            src="/old.svg"
+            src="./old.svg"
             alt="Shopping_Cart"
             className="rounded-md w-6"
           ></img>{" "}

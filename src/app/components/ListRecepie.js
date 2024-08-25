@@ -43,7 +43,7 @@ const ListRecipes = () => {
           >
             <p className="field text-slate-900 flex gap-2 text-left flex w-72 flex-col p-1 m-2 text-xl ">
               {" "}
-              <img src="/recipe.svg" className="w-6 "></img>
+              <img src="./recipe.svg" className="w-6 "></img>
               Recipe Name :{" "}
               <span className="text-stone-900 font-bold border-2 border-black bg-indigo-400 p-2 rounded-xl">
                 {recipe.title}

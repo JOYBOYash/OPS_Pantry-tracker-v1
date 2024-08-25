@@ -57,7 +57,7 @@ const RDeleteItem = ({ id }) => {
       className="border flex gap-2 w-10 flex items-center bg-red-400 justify-center hover:shadow-xl hover:bg-red-900 p-1 rounded text-black"
     >
       {" "}
-      <img src="/trash.svg" className="w-6 justify-center "></img>
+      <img src="./trash.svg" className="w-6 justify-center "></img>
     </button>
   );
 };

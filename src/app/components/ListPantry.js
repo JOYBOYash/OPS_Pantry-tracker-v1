@@ -42,7 +42,7 @@ const ListPantry = () => {
             key={item.id}
           >
             <p className="field text-slate-900 text-left flex w-72 flex-col p-1 m-2 text-xl">
-              <img src="/pantry.svg" className="w-6 "></img>
+              <img src="./pantry.svg" className="w-6 "></img>
               Item Name:{" "}
               <span className="text-stone-900 font-bold border-2 border-black bg-indigo-400 p-2 rounded-xl">
                 {item.value}

@@ -36,15 +36,15 @@ const Homepage = () => {
             className="home hidden link bg-sky-500 hover:shadow-xl w-46 flex transition ease-in-out gap-2 rounded-md hover:rounded-md hover:bg-sky-200 hover:text-indigo-900 p-2 text-xl"
           >
             {" "}
-            <img src="/home.svg" className="w-6"></img>
+            <img src="./home.svg" className="w-6"></img>
           </a>
-          
+
           <a
             href="/grocery"
             className="link bg-sky-500 hover:shadow-xl w-46 flex transition ease-in-out gap-2 rounded-md hover:rounded-md hover:bg-sky-200 hover:text-indigo-900 p-2 text-xl"
           >
             {" "}
-            Grocery Cart <img src="/cart.svg" className="w-6"></img>
+            Grocery Cart <img src="./cart.svg" className="w-6"></img>
           </a>
 
           <a
@@ -52,7 +52,7 @@ const Homepage = () => {
             className="link bg-sky-500 hover:shadow-xl w-46 hover:rounded-md transition ease-in-out hover:bg-sky-200 hover:text-indigo-900  rounded-md p-2 flex gap-2 text-xl"
           >
             {" "}
-            My Pantry <img src="/pantry.svg" className="w-6"></img>
+            My Pantry <img src="./pantry.svg" className="w-6"></img>
           </a>
 
           <a
@@ -60,7 +60,7 @@ const Homepage = () => {
             className="link bg-sky-500 hover:shadow-xl w-46 hover:rounded-md transition ease-in-out hover:bg-sky-200 hover:text-indigo-900 rounded-md p-2 flex gap-2 text-xl"
           >
             {" "}
-            My Recipes <img src="/recipe.svg" className="w-6"></img>
+            My Recipes <img src="./recipe.svg" className="w-6"></img>
           </a>
         </div>
 
@@ -73,7 +73,7 @@ const Homepage = () => {
             }
           }}
         >
-          Log-Out <img src="/power.svg" className="log w-6"></img>
+          Log-Out <img src="./power.svg" className="log w-6"></img>
         </button>
       </div>
 
@@ -98,7 +98,7 @@ const Homepage = () => {
         <div className="features flex gap-20 bg-indigo-900 w-full rounded-lg border-stone-900 shadow-xxl text-center flex-row p-40">
           <div className="w-96 border-4 hover:shadow-2xl transition ease-in-out  hover:scale-105 text-center h-auto flex-col p-10  justify-center h-auto flex items-center gap-10 rounded-t-xl rounded-b-full bg-indigo-600 m-4 ">
             <img
-              src="/cart.webp"
+              src="./cart.webp"
               width={300}
               height={300}
               alt="Shopping_Cart"
@@ -121,7 +121,7 @@ const Homepage = () => {
           <div className="w-96 border-4 hover:shadow-2xl transition ease-in-out hover:scale-105 text-center h-auto  justify-center flex-col  flex items-center gap-10 rounded-t-xl rounded-b-full bg-indigo-600 p-12 m-4 ">
             <div className="text-center flex-col items-center">
               <img
-                src="/pantry.webp"
+                src="./pantry.webp"
                 width={250}
                 height={350}
                 alt="Shopping_Cart"
@@ -143,7 +143,7 @@ const Homepage = () => {
 
           <div className="w-96 border-4 hover:shadow-2xl transition ease-in-out hover:scale-105 flex text-center h-auto justify-center flex-col items-center gap-10 rounded-t-xl rounded-b-full bg-indigo-600 p-10 m-4 ">
             <img
-              src="/recepies.webp"
+              src="./recepies.webp"
               width={300}
               height={300}
               alt="Shopping_Cart"
@@ -184,13 +184,13 @@ const Homepage = () => {
             {" "}
             <a href="https://www.linkedin.com/in/sri-swaroop-kumar-joyboy/">
               <img
-                src="/code.svg"
+                src="./code.svg"
                 className="w-10 bg-indigo-900 rounded-full hover:bg-indigo-500 transition ease-in-out p-2"
               ></img>{" "}
             </a>
             <a href="https://www.linkedin.com/in/sri-swaroop-kumar-joyboy/">
               <img
-                src="/github.svg"
+                src="./github.svg"
                 className="w-10 bg-indigo-900 rounded-full hover:bg-indigo-500 transition ease-in-out p-2"
               ></img>{" "}
             </a>

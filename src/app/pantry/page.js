@@ -37,7 +37,7 @@ const Pantry = () => {
             className="home hidden link bg-sky-500 hover:shadow-xl w-46 flex transition ease-in-out gap-2 rounded-md hover:rounded-md hover:bg-sky-200 hover:text-indigo-900 p-2 text-xl"
           >
             {" "}
-            <img src="/home.svg" className="w-6"></img>
+            <img src="./home.svg" className="w-6"></img>
           </a>
 
           <a
@@ -45,7 +45,7 @@ const Pantry = () => {
             className="link bg-sky-500 hover:shadow-xl w-46 flex transition ease-in-out gap-2 rounded-md hover:rounded-md hover:bg-sky-200 hover:text-indigo-900 p-2 text-xl"
           >
             {" "}
-            Grocery Cart <img src="/cart.svg" className="w-6"></img>
+            Grocery Cart <img src="./cart.svg" className="w-6"></img>
           </a>
 
           <a
@@ -53,7 +53,7 @@ const Pantry = () => {
             className="link bg-sky-500 hover:shadow-xl w-46 hover:rounded-md transition ease-in-out hover:bg-sky-200 hover:text-indigo-900  rounded-md p-2 flex gap-2 text-xl"
           >
             {" "}
-            My Pantry <img src="/pantry.svg" className="w-6"></img>
+            My Pantry <img src="./pantry.svg" className="w-6"></img>
           </a>
 
           <a
@@ -61,7 +61,7 @@ const Pantry = () => {
             className="link bg-sky-500 hover:shadow-xl w-46 hover:rounded-md transition ease-in-out hover:bg-sky-200 hover:text-indigo-900 rounded-md p-2 flex gap-2 text-xl"
           >
             {" "}
-            My Recipes <img src="/recipe.svg" className="w-6"></img>
+            My Recipes <img src="./recipe.svg" className="w-6"></img>
           </a>
         </div>
 
@@ -74,7 +74,7 @@ const Pantry = () => {
             }
           }}
         >
-          Log-Out <img src="/power.svg" className="log w-6"></img>
+          Log-Out <img src="./power.svg" className="log w-6"></img>
         </button>
       </div>
 
@@ -83,7 +83,7 @@ const Pantry = () => {
           width={200}
           height={200}
           className="rounded-md p-4"
-          src="/pantry.webp"
+          src="./pantry.webp"
         />
 
         <p className="flex flex-col justify-center gap-4 text-left">

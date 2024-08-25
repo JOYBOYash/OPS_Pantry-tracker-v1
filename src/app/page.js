@@ -25,7 +25,7 @@ export default function Landing() {
             {" "}
             Login{" "}
             <img
-              src="/old.svg"
+              src="./old.svg"
               alt="Shopping_Cart"
               className="rounded-md w-6"
             ></img>
@@ -42,7 +42,7 @@ export default function Landing() {
             {" "}
             Sign Up{" "}
             <img
-              src="/new.svg"
+              src="./new.svg"
               alt="Shopping_Cart"
               className="rounded-md w-6"
             ></img>
