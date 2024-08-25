@@ -1,31 +1,3 @@
-// import db from "../firebase/firestore";
-// import { doc, deleteDoc } from "@firebase/firestore";
-
-// const GDeleteItem = ({ id }) => {
-//   const handleDelete = async () => {
-//     const itemRef = doc(db, "GroceryItems", id);
-//     try {
-//       await deleteDoc(itemRef);
-//       alert("item has been deleted succesfully");
-//       window.location.reload();
-//     } catch (error) {
-//       console.error("Error deleting document:", error);
-//       alert("Error deleting");
-//     }
-//   };
-//   return (
-//     <button
-//       onClick={handleDelete}
-//       className="border bg-red-400 p-1 rounded text-white"
-//     >
-//       {" "}
-//       Delete{" "}
-//     </button>
-//   );
-// };
-
-// export default GDeleteItem;
-
 import db from "../firebase/firestore";
 import { doc, deleteDoc } from "@firebase/firestore";
 import { useAuthState } from "react-firebase-hooks/auth"; // Import hook for authentication
