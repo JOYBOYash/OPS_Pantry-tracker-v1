@@ -12,21 +12,9 @@ import { useEffect, useState } from "react";
 const Recipe = () => {
   const [user] = useAuthState(auth);
   const router = useRouter();
-  const [userSession, setUserSession] = useState(null);
 
-  useEffect(() => {
-    // Check if sessionStorage and window are available
-    if (typeof window !== "undefined") {
-      const sessionUser = sessionStorage.getItem("user");
-      setUserSession(sessionUser);
-    }
-  }, []);
-
-  if (!user && !userSession) {
-    if (typeof window !== "undefined") {
-      router.push("/");
-    }
-    return null; // Prevent rendering while redirecting
+  if (!user) {
+    router.push("/");
   }
 
   return (
@@ -77,9 +65,6 @@ const Recipe = () => {
           className="logout link flex gap-2 hover:shadow-xl rounded-md transition ease-in-out p-2 bg-red-600 text-xl mb-5 hover:text-black hover:bg-red-900"
           onClick={() => {
             signOut(auth);
-            if (typeof window !== "undefined") {
-              sessionStorage.removeItem("user");
-            }
           }}
         >
           Log-Out <img src="../power.svg" className="log w-6"></img>
