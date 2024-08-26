@@ -12,9 +12,8 @@ import "@/app/queries.css";
 const Pantry = () => {
   const [user] = useAuthState(auth);
   const router = useRouter();
-  const userSession = sessionStorage.getItem("user");
 
-  if (!user && !userSession) {
+  if (!user) {
     router.push("/");
   }
   return (
@@ -70,7 +69,6 @@ const Pantry = () => {
           onClick={() => {
             {
               signOut(auth);
-              sessionStorage.removeItem("user");
             }
           }}
         >

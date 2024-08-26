@@ -10,9 +10,8 @@ import Link from "next/link";
 const Homepage = () => {
   const [user] = useAuthState(auth);
   const router = useRouter();
-  const userSession = sessionStorage.getItem("user");
 
-  if (!user && !userSession) {
+  if (!user) {
     router.push("/");
   }
 
@@ -69,7 +68,6 @@ const Homepage = () => {
           onClick={() => {
             {
               signOut(auth);
-              sessionStorage.removeItem("user");
             }
           }}
         >
