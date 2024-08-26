@@ -15,14 +15,6 @@ const AddItem = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
-    if (!user) {
-      alert("User not authenticated");
-      router.push("/");
-
-      return;
-    }
-
     try {
       const docRef = await addDoc(
         collection(db, "users", user.uid, "GroceryItems"), // Use user.uid instead of user.id

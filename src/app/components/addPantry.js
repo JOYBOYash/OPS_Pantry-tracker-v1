@@ -16,10 +16,10 @@ const AddPantry = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (!user) {
-      alert("User not authenticated");
-      router.push("/");
-    }
+    // if (!user) {
+    //   alert("User not authenticated");
+    //   router.push("/");
+    // }
 
     try {
       // Add the document to the specific user's PantryItems collection
