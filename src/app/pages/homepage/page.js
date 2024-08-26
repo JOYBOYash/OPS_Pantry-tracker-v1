@@ -202,3 +202,90 @@ const Homepage = () => {
 };
 
 export default Homepage;
+
+// "use client";
+// import { useAuthState } from "react-firebase-hooks/auth";
+// import { auth } from "../../firebase/config";
+// import { useRouter } from "next/navigation";
+// import { signOut } from "firebase/auth";
+// import Link from "next/link";
+// import { useEffect } from "react";
+
+// const Homepage = () => {
+//   const [user] = useAuthState(auth);
+//   const router = useRouter();
+
+//   useEffect(() => {
+//     if (!user) {
+//       router.push("/");
+//     }
+//   }, [user]);
+
+//   if (!user) {
+//     return <div>Loading...</div>;
+//   }
+
+//   return (
+//     <div className="min-h-screen flex flex-col items-center gap-2 bg-gray-900">
+//       <div className="bg-gray-800 h-20 w-full flex items-center justify-between gap-4 p-10 rounded-lg shadow-xl">
+//         <div className="logo">
+//           <Link href="/pages/homepage">
+//             <a className="mainlogo text-sky-500 text-2xl">
+//               Pantrack<span className="text-white">.</span>
+//             </a>
+//           </Link>
+//           <p className="logodesc text-white text-xl">
+//             Your One-stop inventory system.
+//           </p>
+//         </div>
+
+//         <div className="nav flex gap-20 items-center">
+//           <Link href="/pages/homepage">
+//             <a className="home link bg-sky-500 p-2 text-xl">Home</a>
+//           </Link>
+//           <Link href="/pages/grocery">
+//             <a className="link bg-sky-500 p-2 text-xl">Grocery Cart</a>
+//           </Link>
+//           <Link href="/pages/pantry">
+//             <a className="link bg-sky-500 p-2 text-xl">My Pantry</a>
+//           </Link>
+//           <Link href="/pages/recipes">
+//             <a className="link bg-sky-500 p-2 text-xl">My Recipes</a>
+//           </Link>
+//         </div>
+
+//         <button
+//           className="logout link p-2 bg-red-600 text-xl"
+//           onClick={() => {
+//             signOut(auth).then(() => {
+//               router.push("/");
+//             });
+//           }}
+//         >
+//           Log-Out
+//         </button>
+//       </div>
+
+//       <section className="section flex flex-col gap-4 bg-indigo-900 p-10">
+//         <h1 className="text-sky-500 text-3xl">Welcome to Pantrack</h1>
+//         <p>
+//           Manage your groceries, pantry items, and recipes all in one place.
+//         </p>
+
+//         <div className="flex gap-6">
+//           <Link href="/pages/pantry">
+//             <a className="link bg-sky-500 p-2 text-xl">My Pantry</a>
+//           </Link>
+//           <Link href="/pages/grocery">
+//             <a className="link bg-sky-500 p-2 text-xl">Grocery Cart</a>
+//           </Link>
+//           <Link href="/pages/recipes">
+//             <a className="link bg-sky-500 p-2 text-xl">My Recipes</a>
+//           </Link>
+//         </div>
+//       </section>
+//     </div>
+//   );
+// };
+
+// export default Homepage;

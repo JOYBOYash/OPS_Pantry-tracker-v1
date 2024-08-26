@@ -48,21 +48,21 @@ const Pantry = () => {
             Grocery Cart <img src="../cart.svg" className="w-6"></img>
           </Link>
 
-          <a
+          <Link
             href="/pages/pantry"
             className="link bg-sky-500 hover:shadow-xl w-46 hover:rounded-md transition ease-in-out hover:bg-sky-200 hover:text-indigo-900  rounded-md p-2 flex gap-2 text-xl"
           >
             {" "}
             My Pantry <img src="../pantry.svg" className="w-6"></img>
-          </a>
+          </Link>
 
-          <a
+          <Link
             href="/pages/recipes"
             className="link bg-sky-500 hover:shadow-xl w-46 hover:rounded-md transition ease-in-out hover:bg-sky-200 hover:text-indigo-900 rounded-md p-2 flex gap-2 text-xl"
           >
             {" "}
             My Recipes <img src="../recipe.svg" className="w-6"></img>
-          </a>
+          </Link>
         </div>
 
         <button
@@ -107,3 +107,80 @@ const Pantry = () => {
 };
 
 export default Pantry;
+
+// "use client";
+// import { useAuthState } from "react-firebase-hooks/auth";
+// import { auth } from "../../firebase/config";
+// import { useRouter } from "next/navigation";
+// import { signOut } from "firebase/auth";
+// import AddPantry from "../../components/addPantry";
+// import ListPantry from "../../components/ListPantry";
+// import Link from "next/link";
+// import { useEffect } from "react";
+
+// const Pantry = () => {
+//   const [user] = useAuthState(auth);
+//   const router = useRouter();
+
+//   useEffect(() => {
+//     if (!user) {
+//       router.push("/");
+//     }
+//   }, [user]);
+
+//   if (!user) {
+//     return <div>Loading...</div>;
+//   }
+
+//   return (
+//     <div className="min-h-screen flex flex-col items-center gap-2 bg-gray-900">
+//       <div className="bg-gray-800 h-20 w-full flex items-center justify-between gap-4 p-10 rounded-lg shadow-xl">
+//         <div className="logo">
+//           <Link href="/pages/homepage">
+//             <a className="mainlogo text-sky-500 text-2xl">
+//               Pantrack<span className="text-white">.</span>
+//             </a>
+//           </Link>
+//           <p className="logodesc text-white text-xl">
+//             Your One-stop inventory system.
+//           </p>
+//         </div>
+
+//         <div className="nav flex gap-20 items-center">
+//           <Link href="/pages/homepage">
+//             <a className="home link bg-sky-500 p-2 text-xl">Home</a>
+//           </Link>
+//           <Link href="/pages/grocery">
+//             <a className="link bg-sky-500 p-2 text-xl">Grocery Cart</a>
+//           </Link>
+//           <Link href="/pages/pantry">
+//             <a className="link bg-sky-500 p-2 text-xl">My Pantry</a>
+//           </Link>
+//           <Link href="/pages/recipes">
+//             <a className="link bg-sky-500 p-2 text-xl">My Recipes</a>
+//           </Link>
+//         </div>
+
+//         <button
+//           className="logout link p-2 bg-red-600 text-xl"
+//           onClick={() => {
+//             signOut(auth).then(() => {
+//               router.push("/");
+//             });
+//           }}
+//         >
+//           Log-Out
+//         </button>
+//       </div>
+
+//       <section className="section flex flex-col gap-4 bg-indigo-900 p-10">
+//         <h1 className="text-sky-500 text-3xl">Pantry Section</h1>
+//         <p>Manage your pantry items and set expiry reminders.</p>
+//         <AddPantry />
+//         <ListPantry />
+//       </section>
+//     </div>
+//   );
+// };
+
+// export default Pantry;
