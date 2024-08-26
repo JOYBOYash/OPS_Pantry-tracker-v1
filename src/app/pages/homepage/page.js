@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { signOut } from "firebase/auth";
 
 import "@/app/queries.css";
+import Link from "next/link";
 
 const Homepage = () => {
   const [user] = useAuthState(auth);
@@ -19,48 +20,48 @@ const Homepage = () => {
     <div className="min-h-screen overflow-x-hidden  flex flex-col items-center bg-gray-900">
       <div className="bg-gray navbar -800 h-20 w-full flex items-center justify-between gap-4 p-10 rounded-lg shadow-xl w-96">
         <div className="logo">
-          <a href="/homepage">
+          <Link href="/pages/homepage">
             <h1 className="mainlogo text-sky-500 text-2xl ">
               Pantrack<span className="text-white">.</span>
             </h1>
-          </a>
+          </Link>
           <p className="logodesc text-white text-xl ">
             Your One-stop inventory system.
           </p>
         </div>
 
         <div className=" nav flex gap-20 items-center">
-          <a
-            href="/homepage"
+          <Link
+            href="/pages/homepage"
             className="home hidden link bg-sky-500 hover:shadow-xl w-46 flex transition ease-in-out gap-2 rounded-md hover:rounded-md hover:bg-sky-200 hover:text-indigo-900 p-2 text-xl"
           >
             {" "}
-            <img src="./home.svg" className="w-6"></img>
-          </a>
+            <img src="../home.svg" className="w-6"></img>
+          </Link>
 
-          <a
-            href="/grocery"
+          <Link
+            href="/pages/grocery"
             className="link bg-sky-500 hover:shadow-xl w-46 flex transition ease-in-out gap-2 rounded-md hover:rounded-md hover:bg-sky-200 hover:text-indigo-900 p-2 text-xl"
           >
             {" "}
-            Grocery Cart <img src="./cart.svg" className="w-6"></img>
-          </a>
+            Grocery Cart <img src="../cart.svg" className="w-6"></img>
+          </Link>
 
-          <a
-            href="/pantry"
+          <Link
+            href="/pages/pantry"
             className="link bg-sky-500 hover:shadow-xl w-46 hover:rounded-md transition ease-in-out hover:bg-sky-200 hover:text-indigo-900  rounded-md p-2 flex gap-2 text-xl"
           >
             {" "}
-            My Pantry <img src="./pantry.svg" className="w-6"></img>
-          </a>
+            My Pantry <img src="../pantry.svg" className="w-6"></img>
+          </Link>
 
-          <a
-            href="/recipes"
+          <Link
+            href="/pages/recipes"
             className="link bg-sky-500 hover:shadow-xl w-46 hover:rounded-md transition ease-in-out hover:bg-sky-200 hover:text-indigo-900 rounded-md p-2 flex gap-2 text-xl"
           >
             {" "}
-            My Recipes <img src="./recipe.svg" className="w-6"></img>
-          </a>
+            My Recipes <img src="../recipe.svg" className="w-6"></img>
+          </Link>
         </div>
 
         <button
@@ -72,7 +73,7 @@ const Homepage = () => {
             }
           }}
         >
-          Log-Out <img src="./power.svg" className="log w-6"></img>
+          Log-Out <img src="../power.svg" className="log w-6"></img>
         </button>
       </div>
 
@@ -97,7 +98,7 @@ const Homepage = () => {
         <div className="features flex gap-20 bg-indigo-900 w-full rounded-lg border-stone-900 shadow-xxl text-center flex-row p-40">
           <div className="w-96 border-4 hover:shadow-2xl transition ease-in-out  hover:scale-105 text-center h-auto flex-col p-10  justify-center h-auto flex items-center gap-10 rounded-t-xl rounded-b-full bg-indigo-600 m-4 ">
             <img
-              src="./cart.webp"
+              src="../cart.webp"
               width={300}
               height={300}
               alt="Shopping_Cart"
@@ -107,20 +108,20 @@ const Homepage = () => {
               <h1 className="text-white text-2xl mb-5">
                 Manage your Shopping Cart!
               </h1>
-              <a
-                href="/grocery"
+              <Link
+                href="/pages/grocery"
                 className="bg-sky-500 transition ease-in-out w-46 rounded-md hover:rounded-md hover:bg-sky-200 hover:text-indigo-900 p-2 text-white text-xl"
               >
                 {" "}
                 Go to Cart &larr;{" "}
-              </a>
+              </Link>
             </div>
           </div>
 
           <div className="w-96 border-4 hover:shadow-2xl transition ease-in-out hover:scale-105 text-center h-auto  justify-center flex-col  flex items-center gap-10 rounded-t-xl rounded-b-full bg-indigo-600 p-12 m-4 ">
             <div className="text-center flex-col items-center">
               <img
-                src="./pantry.webp"
+                src="../pantry.webp"
                 width={250}
                 height={350}
                 alt="Shopping_Cart"
@@ -130,19 +131,19 @@ const Homepage = () => {
               <h1 className="text-white text-2xl mb-5">
                 Manage your Home Inventory!
               </h1>
-              <a
-                href="/pantry"
+              <Link
+                href="/pages/pantry"
                 className="bg-sky-500 w-46 transition ease-in-out rounded-md hover:rounded-md hover:bg-sky-200 hover:text-indigo-900 p-2 text-white text-xl"
               >
                 {" "}
                 Go to Pantry &rarr;{" "}
-              </a>
+              </Link>
             </div>
           </div>
 
           <div className="w-96 border-4 hover:shadow-2xl transition ease-in-out hover:scale-105 flex text-center h-auto justify-center flex-col items-center gap-10 rounded-t-xl rounded-b-full bg-indigo-600 p-10 m-4 ">
             <img
-              src="./recepies.webp"
+              src="../recepies.webp"
               width={300}
               height={300}
               alt="Shopping_Cart"
@@ -152,13 +153,13 @@ const Homepage = () => {
               <h1 className="text-white text-2xl mb-5">
                 Create and share your Fun recipes !
               </h1>
-              <a
-                href="/recipes"
+              <Link
+                href="/pages/recipes"
                 className="bg-sky-500 transition ease-in-out w-46 rounded-md hover:rounded-md hover:bg-sky-200 hover:text-indigo-900 p-2 text-white text-xl"
               >
                 {" "}
                 Go to Recipes &larr;{" "}
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -181,18 +182,18 @@ const Homepage = () => {
           </p>
           <div className="flex gap-4 items-center">
             {" "}
-            <a href="https://www.linkedin.com/in/sri-swaroop-kumar-joyboy/">
+            <Link href="https://www.linkedin.com/in/sri-swaroop-kumar-joyboy/">
               <img
-                src="./code.svg"
+                src="../code.svg"
                 className="w-10 bg-indigo-900 rounded-full hover:bg-indigo-500 transition ease-in-out p-2"
               ></img>{" "}
-            </a>
-            <a href="https://www.linkedin.com/in/sri-swaroop-kumar-joyboy/">
+            </Link>
+            <Link href="https://www.linkedin.com/in/sri-swaroop-kumar-joyboy/">
               <img
-                src="./github.svg"
+                src="../github.svg"
                 className="w-10 bg-indigo-900 rounded-full hover:bg-indigo-500 transition ease-in-out p-2"
               ></img>{" "}
-            </a>
+            </Link>
           </div>
         </p>
       </section>

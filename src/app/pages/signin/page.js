@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { auth } from "@/app/firebase/config";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import "@/app/queries.css";
 
 const SignIn = () => {
@@ -19,7 +20,7 @@ const SignIn = () => {
       sessionStorage.setItem("user", true);
       setEmail("");
       setPassword("");
-      router.push("/homepage");
+      router.push("/pages/homepage");
     } catch (e) {
       console.error(e);
     }
@@ -31,7 +32,7 @@ const SignIn = () => {
         <h1 className="text-black flex items-center gap-2 text-2xl mb-5">
           {" "}
           <img
-            src="./old.svg"
+            src="../old.svg"
             alt="Shopping_Cart"
             className="rounded-md w-6"
           ></img>{" "}
@@ -60,10 +61,10 @@ const SignIn = () => {
         </button>
         <h1 className="text-white text-xl mb-5">
           New User?{" "}
-          <a href="/signup" className="text-sky-500">
+          <Link href="/pages/signup" className="text-sky-500">
             {" "}
             SignUp{" "}
-          </a>{" "}
+          </Link>{" "}
           here.{" "}
         </h1>
       </div>

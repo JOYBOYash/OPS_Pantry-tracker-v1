@@ -1,30 +1,4 @@
-// import db from "../firebase/firestore";
-// import { doc, deleteDoc } from "@firebase/firestore";
-
-// const RDeleteItem = ({ id }) => {
-//   const handleDelete = async () => {
-//     const itemRef = doc(db, "Recepies", id);
-//     try {
-//       await deleteDoc(itemRef);
-//       alert("item has been deleted succesfully");
-//       window.location.reload();
-//     } catch (error) {
-//       console.error("Error deleting document:", error);
-//       alert("Error deleting");
-//     }
-//   };
-//   return (
-//     <button
-//       onClick={handleDelete}
-//       className="border bg-red-400 p-1 rounded text-white"
-//     >
-//       {" "}
-//       Delete{" "}
-//     </button>
-//   );
-// };
-
-// export default RDeleteItem;
+"use client";
 
 import db from "../firebase/firestore";
 import { doc, deleteDoc } from "@firebase/firestore";
@@ -57,7 +31,7 @@ const RDeleteItem = ({ id }) => {
       className="border flex gap-2 w-10 flex items-center bg-red-400 justify-center hover:shadow-xl hover:bg-red-900 p-1 rounded text-black"
     >
       {" "}
-      <img src="./trash.svg" className="w-6 justify-center "></img>
+      <img src="../trash.svg" className="w-6 justify-center "></img>
     </button>
   );
 };

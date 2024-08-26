@@ -19,7 +19,7 @@ export default function Landing() {
           {" "}
           <h2> Already a User ? </h2>
           <Link
-            href="/signin"
+            href="/pages/signin"
             className="bg-indigo-400 flex items-center p-2 gap-2 transition ease-in-out hover:border-2  hover:border-indigo-900 w-32 justify-center p-2 w-24 hover:bg-sky-600 hover:outline-2 hover:text-indigo-200  text-center text-indigo-900 text-bold text-xl"
           >
             {" "}
@@ -36,7 +36,7 @@ export default function Landing() {
           {" "}
           <h2> New to the App ? </h2>
           <Link
-            href="/signup"
+            href="/pages/signup"
             className="bg-indigo-400 transition ease-in-out hover:border-2  hover:border-indigo-900 flex items-center p-2 w-32 justify-center gap-2 hover:bg-sky-600 hover:outline-2 hover:outline-sky-300 hover:text-indigo-200  text-center  text-indigo-900 text-bold text-xl"
           >
             {" "}

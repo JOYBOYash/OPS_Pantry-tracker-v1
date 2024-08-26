@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { addDoc, collection } from "@firebase/firestore";
 import db from "../firebase/firestore";
@@ -5,7 +7,7 @@ import { auth } from "../firebase/config"; // Import Firebase config and auth
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useRouter } from "next/navigation";
 
-const AddItem = (props) => {
+const AddItem = () => {
   const [value, setValue] = useState("");
   const [qty, setQty] = useState("");
   const [user] = useAuthState(auth); // Get the authenticated user
@@ -63,7 +65,7 @@ const AddItem = (props) => {
         className="bg-indigo-900 flex gap-2 items-center justify-center text-xl p-2 hover:shadow-xl rounded-full hover:text-black hover:bg-indigo-600"
         type="submit"
       >
-        Add Item <img src="./add.svg" className="w-6 "></img>
+        Add Item <img src="../add.svg" className="w-6 "></img>
       </button>
     </form>
   );

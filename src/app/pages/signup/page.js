@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { auth } from "@/app/firebase/config";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import "@/app/queries.css";
 
 const SignUp = () => {
@@ -18,7 +19,7 @@ const SignUp = () => {
       sessionStorage.setItem("user", true);
       setEmail("");
       setPassword("");
-      router.push("/signin");
+      router.push("/pages/signin");
     } catch (e) {
       console.error(e);
     }
@@ -30,7 +31,7 @@ const SignUp = () => {
         <h1 className="text-black flex items-center gap-2 text-2xl mb-5">
           {" "}
           <img
-            src="./new.svg"
+            src="../new.svg"
             alt="Shopping_Cart"
             className="rounded-md w-6"
           ></img>{" "}
@@ -58,10 +59,10 @@ const SignUp = () => {
         </button>
         <h1 className="text-white text-xl mb-5">
           Already a User?{" "}
-          <a href="/signin" className="text-sky-500">
+          <Link href="/pages/signin" className="text-sky-500">
             {" "}
             SignIn{" "}
-          </a>{" "}
+          </Link>{" "}
           here.{" "}
         </h1>
       </div>

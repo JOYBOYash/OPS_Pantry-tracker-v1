@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { signOut } from "firebase/auth";
 import AddPantry from "../../components/addPantry";
 import ListPantry from "../../components/ListPantry";
+import Link from "next/link";
 
 import "@/app/queries.css";
 
@@ -20,47 +21,47 @@ const Pantry = () => {
     <div className="min-h-screen flex flex-col items-center gap-2 bg-gray-900">
       <div className="bg-gray navbar -800 h-20 w-full flex items-center justify-between gap-4 p-10 rounded-lg shadow-xl w-96">
         <div className="logo">
-          <a href="/homepage">
+          <Link href="/pages/homepage">
             <h1 className="mainlogo text-sky-500 text-2xl ">
               Pantrack<span className="text-white">.</span>
             </h1>
-          </a>
+          </Link>
           <p className="logodesc text-white text-xl ">
             Your One-stop inventory system.
           </p>
         </div>
 
         <div className=" nav flex gap-20 items-center">
-          <a
-            href="/homepage"
+          <Link
+            href="/pages/homepage"
             className="home hidden link bg-sky-500 hover:shadow-xl w-46 flex transition ease-in-out gap-2 rounded-md hover:rounded-md hover:bg-sky-200 hover:text-indigo-900 p-2 text-xl"
           >
             {" "}
-            <img src="./home.svg" className="w-6"></img>
-          </a>
+            <img src="../home.svg" className="w-6"></img>
+          </Link>
 
-          <a
-            href="/grocery"
+          <Link
+            href="/pages/grocery"
             className="link bg-sky-500 hover:shadow-xl w-46 flex transition ease-in-out gap-2 rounded-md hover:rounded-md hover:bg-sky-200 hover:text-indigo-900 p-2 text-xl"
           >
             {" "}
-            Grocery Cart <img src="./cart.svg" className="w-6"></img>
-          </a>
+            Grocery Cart <img src="../cart.svg" className="w-6"></img>
+          </Link>
 
           <a
-            href="/pantry"
+            href="/pages/pantry"
             className="link bg-sky-500 hover:shadow-xl w-46 hover:rounded-md transition ease-in-out hover:bg-sky-200 hover:text-indigo-900  rounded-md p-2 flex gap-2 text-xl"
           >
             {" "}
-            My Pantry <img src="./pantry.svg" className="w-6"></img>
+            My Pantry <img src="../pantry.svg" className="w-6"></img>
           </a>
 
           <a
-            href="/recipes"
+            href="/pages/recipes"
             className="link bg-sky-500 hover:shadow-xl w-46 hover:rounded-md transition ease-in-out hover:bg-sky-200 hover:text-indigo-900 rounded-md p-2 flex gap-2 text-xl"
           >
             {" "}
-            My Recipes <img src="./recipe.svg" className="w-6"></img>
+            My Recipes <img src="../recipe.svg" className="w-6"></img>
           </a>
         </div>
 
@@ -73,7 +74,7 @@ const Pantry = () => {
             }
           }}
         >
-          Log-Out <img src="./power.svg" className="log w-6"></img>
+          Log-Out <img src="../power.svg" className="log w-6"></img>
         </button>
       </div>
 
@@ -82,7 +83,7 @@ const Pantry = () => {
           width={200}
           height={200}
           className="rounded-md p-4"
-          src="./pantry.webp"
+          src="../pantry.webp"
         />
 
         <p className="flex flex-col justify-center gap-4 text-left">
@@ -95,7 +96,7 @@ const Pantry = () => {
       </p>
 
       <section className="section w-full justify-center bg-indigo-900 h-full flex items-center p-20 gap-10  m-4 rounded-md  ">
-        <div className="flex flex-col p-4 items-center" text-center>
+        <div className="flex flex-col p-4 items-center">
           <h1 className="text-sky-500 text-2xl "> Add to Pantry:</h1>
           <AddPantry />
         </div>

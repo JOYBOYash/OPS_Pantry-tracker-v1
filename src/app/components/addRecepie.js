@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import { collection, addDoc } from "@firebase/firestore";
 import db from "../firebase/firestore";
@@ -76,7 +77,7 @@ const AddRecepie = () => {
         className="bg-indigo-900 text-xl flex justify-center items-center gap-2 p-2 hover:shadow-xl rounded-full hover:text-black hover:bg-indigo-600"
         type="submit"
       >
-        Add Recipe <img src="./add.svg" className="w-6 "></img>
+        Add Recipe <img src="../add.svg" className="w-6 "></img>
       </button>
     </form>
   );
