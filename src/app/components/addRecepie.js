@@ -28,7 +28,7 @@ const AddRecepie = () => {
           }
         );
         console.log("Recipe added with ID:", docRef.id);
-        window.location.reload(); // Optional, could be removed for better UX
+        // window.location.reload(); // Optional, could be removed for better UX
         setTitle("");
         setProcess("");
         setItems("");

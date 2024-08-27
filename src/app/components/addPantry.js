@@ -47,7 +47,7 @@ const AddPantry = () => {
       setValue("");
       setQty("");
       setDate("");
-      window.location.reload();
+      // window.location.reload();
     } catch (error) {
       console.log("Error adding the item!", error);
     }

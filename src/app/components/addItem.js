@@ -24,7 +24,7 @@ const AddItem = () => {
         }
       );
       console.log("Item added with ID:", docRef.id);
-      window.location.reload(); // Reload after adding the item
+      // window.location.reload(); // Reload after adding the item
       setValue("");
       setQty("");
     } catch (error) {
