@@ -18,7 +18,7 @@ const Recipe = () => {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center gap-6 bg-gray-900">
+    <div className="page min-h-screen flex flex-col items-center gap-2 bg-gray-900">
       <div className="bg-gray navbar -800 h-20 w-full flex items-center justify-between gap-4 p-10 rounded-lg shadow-xl w-96">
         <div className="logo">
           <Link href="/pages/homepage">
@@ -71,7 +71,7 @@ const Recipe = () => {
         </button>
       </div>
 
-      <p className="intro justify-center text-2xl bg-slate-900 rounded-3xl flex gap-4 shadow-xl p-20 m-20">
+      <div className="intro justify-center text-2xl bg-slate-900 rounded-3xl flex gap-4 shadow-xl p-20 m-20">
         <img
           width={200}
           height={200}
@@ -79,21 +79,20 @@ const Recipe = () => {
           src="../recepies.webp"
         />
 
-        <p className="flex flex-col justify-center gap-4 text-left">
+        <div className="flex flex-col justify-center gap-4 text-left">
           <h1 className="text-sky-500 text-left text-3xl">Recipes Section</h1>
           Here's where you can come up with crazy and tasty recipes to try out!{" "}
           <br />
           You never know when your next million taste-bud waking recipe idea
           might hit you!
-        </p>
-      </p>
+        </div>
+      </div>
 
-      <section className="section w-full h-full flex items-center p-20 gap-10 bg-indigo-900 m-4 rounded-md">
+      <section className="section w-full justify-center bg-indigo-900 h-full flex items-center p-20 gap-10  m-4 rounded-md ">
         <div className="flex flex-col p-4 items-center" text-center>
           <h1 className="text-sky-500 text-2xl">Add New Recipe:</h1>
           <AddRecepie />
         </div>
-        <ListRecepie />
       </section>
     </div>
   );

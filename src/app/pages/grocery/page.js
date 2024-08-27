@@ -17,7 +17,7 @@ const Grocery = () => {
     router.push("/");
   }
   return (
-    <div className="main min-h-screen flex flex-col items-center gap-6 bg-gray-900">
+    <div className="main page min-h-screen flex flex-col items-center gap-6 bg-gray-900">
       <div className="bg-gray navbar -800 h-20 w-full flex items-center justify-between gap-4 p-10 rounded-lg shadow-xl w-96">
         <div className="logo">
           <Link href="/pages/homepage">
@@ -76,7 +76,7 @@ const Grocery = () => {
         </button>
       </div>
 
-      <p className="intro justify-center text-2xl  bg-slate-900 rounded-3xl flex gap-4 shadow-xl p-20 m-20">
+      <div className="intro justify-center text-2xl  bg-slate-900 rounded-3xl flex gap-4 shadow-xl p-20 m-20">
         <img
           width={250}
           height={250}
@@ -90,14 +90,14 @@ const Grocery = () => {
           Here's where you can manage all the items in your Shopping list !{" "}
           <br></br> Never forget what to buy and stock up in your inventory!
         </p>
-      </p>
+      </div>
 
       <section className="section w-full h-full flex items-center p-20 gap-10 bg-indigo-900  m-4 rounded-md">
         <div className=" flex flex-col p-4 items-center" text-center>
           <h1 className="text-sky-500 text-2xl "> Add Groceries:</h1>
           <AddItem />
         </div>
-        <ListItems />
+        {/* <ListItems /> */}
       </section>
     </div>
   );

@@ -14,8 +14,6 @@ const RDeleteItem = ({ id }) => {
       const itemRef = doc(db, "users", user.uid, "Recipes", id);
       try {
         await deleteDoc(itemRef);
-        alert("Item has been deleted successfully");
-        window.location.reload();
       } catch (error) {
         console.error("Error deleting document:", error);
         alert("Error deleting");

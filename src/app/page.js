@@ -6,7 +6,7 @@ import "@/app/queries.css";
 
 export default function Landing() {
   return (
-    <main className=" main-cnt flex flex-col min-h-screen items-center justify-between bg-gray-800 gap-10 p-96">
+    <main className="page main-cnt flex flex-col min-h-screen items-center justify-between bg-gray-800 gap-10 p-96">
       <h1 className="heading text-3xl text-sky-300 drop-shadow-lg">
         Welcome to "
         <span className="text-indigo-100 underline-offset-8 underline">

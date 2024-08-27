@@ -14,8 +14,6 @@ const PDeleteItem = ({ id }) => {
       const itemRef = doc(db, "users", user.uid, "PantryItems", id);
       try {
         await deleteDoc(itemRef);
-        alert("Item has been deleted successfully");
-        window.location.reload();
       } catch (error) {
         console.error("Error deleting document:", error);
         alert("Error deleting");
